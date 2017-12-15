@@ -76,7 +76,7 @@ public class quiz_Activity extends AppCompatActivity {
 
 
         /**
-         * Get value of the question and answers.
+         * Get value of the question and answers. Then add them to the Question class.
          */
         queue = Volley.newRequestQueue(this);
 
@@ -129,6 +129,9 @@ public class quiz_Activity extends AppCompatActivity {
 
     }
 
+    /**
+     * Update the screen with the new question.
+     */
     private void updateUI() {
         Question q = qList.get(currentq);
         ArrayList<String> a = q.getAnswers();
@@ -147,6 +150,10 @@ public class quiz_Activity extends AppCompatActivity {
 
     }
 
+    /**
+     * Generate random order of the answers.
+     */
+
     public static int[] RandomizeArray(int[] array){
         Random rgen = new Random();  // Random number generator
 
@@ -159,6 +166,10 @@ public class quiz_Activity extends AppCompatActivity {
 
         return array;
     }
+
+    /**
+     * Check whether an answer is valid. Then update the score and question.
+     */
 
     public void submit(View view) {
         int radioButtonID = radioButtonGroup.getCheckedRadioButtonId();
@@ -189,7 +200,7 @@ public class quiz_Activity extends AppCompatActivity {
 
                     DatabaseReference ref = database.getReference("scores");
 
-
+                    // Get the highscore.
                     if(oldScore > score){
                         ref.child(uid).setValue(oldScore);
                     }

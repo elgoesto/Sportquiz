@@ -46,6 +46,10 @@ public class score_Activity extends AppCompatActivity {
         showScore(uid);
     }
 
+    /**
+     *  Show the score of the user.
+     */
+
     private void showScore(String uid) {
         // Read from the database
         users.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -78,6 +82,9 @@ public class score_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Get the user id of an user, then return the score of that user.
+     */
     public void searchClick(View view) {
         String email = searchUserText.getText().toString().replace(".",",");
         mail = email;

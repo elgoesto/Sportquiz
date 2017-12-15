@@ -36,6 +36,6 @@
         android:id="@+id/searchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Search user"
         android:onClick="searchClick"/>
 </LinearLayout>

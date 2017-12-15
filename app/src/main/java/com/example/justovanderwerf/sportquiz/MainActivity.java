@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton = (Button)findViewById(R.id.loginButton);
         registerButton = (Button)findViewById(R.id.registerButton);
 
-
+        // listeners for login an register button
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    /**
+     * Create user and sync with firebase.
+     */
 
     private void createUser(final String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -98,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Login and go to quiz page.
+     */
     private void logIn(final String email, final String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

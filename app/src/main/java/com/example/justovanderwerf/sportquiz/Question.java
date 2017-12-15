@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * Created by Justo van der Werf on 12/14/2017.
+ *
+ * Class to store JSON data.
  */
 
 public class Question {

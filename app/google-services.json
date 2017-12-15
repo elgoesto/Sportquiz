@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1036467055504",
+    "firebase_url": "https://supergaafding.firebaseio.com",
+    "project_id": "supergaafding",
+    "storage_bucket": "supergaafding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036467055504:android:a06daef4c7043b53",
+        "android_client_info": {
+          "package_name": "com.example.justovanderwerf.sportquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036467055504-dbn5fpcd0pkq2hbtvausp15u5iidic3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.justovanderwerf.sportquiz",
+            "certificate_hash": "ac0038244c45aaec20c3971d9ebe1d4d23a158d8"
+          }
+        },
+        {
+          "client_id": "1036467055504-5115i0qkvfkhhodfst27f2r1p4dku50t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3QA1It5lvcLY_mU62kZ-pgxzrru3gDJQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036467055504-5115i0qkvfkhhodfst27f2r1p4dku50t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

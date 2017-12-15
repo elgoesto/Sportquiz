@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void createUser(String email, String password) {
+    private void createUser(final String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -78,9 +78,11 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("succes", "createUserWithEmail:success");
+                            String mail = email.replace('.',',');
                             String uid = mAuth.getCurrentUser().getUid();
-                            DatabaseReference ref = database.getReference("scores");
-                            ref.child(uid).setValue(0);
+                            DatabaseReference ref = database.getReference();
+                            ref.child("scores").child(uid).setValue(0);
+                            ref.child("emailToUid").child(mail).setValue(uid);
                             Intent intent = new Intent(MainActivity.this, quiz_Activity.class);
                             startActivity(intent);
 

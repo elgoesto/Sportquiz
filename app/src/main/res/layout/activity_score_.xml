@@ -23,4 +23,19 @@
         android:layout_height="wrap_content"
         android:text="Log out"
         android:onClick="logOut"/>
+
+    <EditText
+        android:id="@+id/searchUserText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="searchClick"/>
 </LinearLayout>
